@@ -1,8 +1,6 @@
 function play(){
     ///Home screen section
-    console.log('play game')
-   //  const homeSection  = document.getElementById('home_screen')
-   //  homeSection.classList.add('hidden')
+   
 
     addElementById('home_screen');
     addElementById('final_score');
@@ -10,8 +8,6 @@ function play(){
 
      //playground section
 
-   //  const playGroundSection = document.getElementById('play_ground');
-   //  playGroundSection.classList.remove('hidden');
     removeElementById('play_ground');
     setTextElementValueById('current_life',5)
     setTextElementValueById('current_score',0)
@@ -36,9 +32,6 @@ function play(){
      const addBackgroundColor  = document.getElementById(randomIndex);
    
      addBackgroundColor.classList.add('bg-red-400')
-
-    // const bgColor = document.getElementById("current_alphabet");
-    // bgColor.classList.add("bg-red-400");
 
 }
 
@@ -88,12 +81,7 @@ function handleKeyboardButtonPress(event){
 
       //show the update score
       currentScoreElement.innerText = updateScore;
-       ///to change final Score
-       
-      //  const finalScoreElement = document.getElementById('change_score')
-      //  // console.log(finalScoreElement)
-      //  finalScoreElement.innerHTML = updateScore
-
+    
      }
      else{
          console.log('press again')
@@ -112,12 +100,10 @@ function handleKeyboardButtonPress(event){
 
        if(updateLife===0){
          console.log('Game Over')
-         //   const playGroundSection = document.getElementById('play_ground')
-         //   playGroundSection.classList.add('hidden');
+        
          addElementById('play_ground');
 
-         //   const FinalSection = document.getElementById('final_score')
-         //   FinalSection.classList.remove('hidden')
+         
 
          removeElementById('final_score')
 
@@ -126,22 +112,13 @@ function handleKeyboardButtonPress(event){
          setTextElementValueById('last_score',lastScore)
 
 
-         ///Clear the last selected alphabet 
-        //  const currentAlphabet = getTextElementValueById('current_alphabet')
-
+      
 
          const removeBackgroundColor = document.getElementById(expectedAlphabet);
          removeBackgroundColor.classList.remove('bg-red-400')
   
 
-         // ///to change final Score
-       
-         // const finalScoreElement = document.getElementById('change_score')
-         // // console.log(finalScoreElement)
-         // finalScoreElement.innerHTML = updateScore
-
-
-
+        
 
 
 
